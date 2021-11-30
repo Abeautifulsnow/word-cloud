@@ -1,0 +1,26 @@
+@import "~antd/dist/antd.css";
+
+#word-cloud-content {
+  margin-top: 20px;
+}
+
+#word-cloud-content > h2 {
+  text-align: center;
+}
+
+#word-text-area {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#word-operation {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+#word-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
