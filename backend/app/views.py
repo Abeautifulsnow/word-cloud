@@ -1,10 +1,10 @@
 import base64
 import io
+import json
 
-from flask import request
+from django.views.decorators.csrf import csrf_exempt
+from django.http.response import JsonResponse
 from wordcloud import WordCloud
-
-from . import app
 
 
 # 真正调用词云库生成图片
@@ -18,8 +18,10 @@ def get_word_cloud(text):
 
 
 # 生成词云图片接口，以base64格式返回
-@app.route('/word/cloud/generate', methods=["POST"])
-def cloud():
-    text = request.json.get("word")
-    res = get_word_cloud(text)
-    return res
+@csrf_exempt
+def cloud(request):
+    if request.method == 'POST':
+        result = json.loads(request.body)
+        text = result.get('word')
+        res = get_word_cloud(text)
+        return JsonResponse(res, safe=False)

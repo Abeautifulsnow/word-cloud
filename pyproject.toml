@@ -1,19 +1,17 @@
 [tool.poetry]
 name = "word-cloud"
 version = "0.1.0"
-description = "Flask version."
+description = "Django Version"
 authors = ["Abeautifulsnow <1491444340@qq.com>"]
-license = "MIT License."
+license = "MIT LICENSE"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Flask = "^2.0.2"
-Flask-Cors = "^3.0.10"
-wordcloud = '^1.8.1'
+Django = "^3.2.9"
+django-cors-headers = "^3.10.0"
+wordcloud = "^1.8.1"
 
 [tool.poetry.dev-dependencies]
-Flask-Cors = "^3.0.10"
-wordcloud = '^1.8.1'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
