@@ -8,4 +8,7 @@ app = Flask(
 )
 CORS(app,
      resources=r'/*',
+     supports_credentials=True
      )
+
+from . import routes
